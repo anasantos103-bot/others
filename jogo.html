@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UI do Caos - Arcade Extremo</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="seletor-temas">
+        <button class="btn-tema" onclick="mudarTema('')">Cyberpunk</button>
+        <button class="btn-tema" onclick="mudarTema('tema-rosa')">Rosa</button>
+        <button class="btn-tema" onclick="mudarTema('tema-roxo')">Roxo</button>
+        <button class="btn-tema" onclick="mudarTema('tema-azul')">Azul</button>
+        <button class="btn-tema" onclick="mudarTema('tema-pastel')">Pastel</button>
+    </div>
+
+    <div class="painel-principal">
+        <h1>Arcade do Caos: Nível Pesadelo</h1>
+        <h2 id="display-data">[ DIA ] / [ MÊS ] / [ ANO ]</h2>
+    </div>
+
+    <div id="jogo-dia-container" class="arena-caos">
+        <h3>Fase 1: Enxame Tremeluzente</h3>
+        <p>As bolas tremem. A velocidade é insana. Os números trocam sozinhos.</p>
+        <div id="arena-bolinhas"></div>
+    </div>
+
+    <div id="jogo-mes-container" class="arena-caos" style="display: none;">
+        <h3>Fase 2: Reator Quântico</h3>
+        <p>A energia cai (-1) a cada 700ms. O Impulso dá (+5). O botão de Travar sofre anomalias espaciais!</p>
+        
+        <div id="mes-display-gigante">01</div>
+        <div id="mes-nome-display">JANEIRO</div>
+        
+        <button id="btn-impulso" class="btn-normal">⚡ IMPULSO (+5)</button>
+        
+        <button id="btn-confirmar-mes" class="btn-normal">🔒 TRAVAR</button>
+    </div>
+
+    <div id="jogo-ano-container" class="arena-caos" style="display: none;">
+        <h3>Fase 3: Roleta Quântica</h3>
+        <p>O teclado baralha-se sozinho a cada 700ms. Não hesite.</p>
+        <div id="ano-display">____</div>
+        <div id="teclado-container"></div>
+        <button id="btn-limpar-ano" class="btn-normal" style="font-size: 0.8em; padding: 10px;">Resetar Ano</button>
+    </div>
+
+    <div id="chefao-container" class="arena-caos" style="display: none;">
+        <h3>Boss Final: O Clone Jutsu</h3>
+        <p>Só UM botão guarda os dados. Os outros são armadilhas. (Tecla TAB desativada!)</p>
+    </div>
+
+    <div id="pets-container"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
